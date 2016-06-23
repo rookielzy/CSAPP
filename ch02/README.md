@@ -194,3 +194,59 @@ x		T2U4(x)
 0		0
 5		5
 ```
+
+## Exercise 2.21
+```flow			
+									Type			Value
+-2147483647-1 == 2147483648U		signed			  1
+-2147483647-1 < 2147483647			signed 		  	  1
+-2147483647-1U < 2147483647			unsigned 		  0
+-2147483647-1 < -2147483647			signed 			  1
+-2147483647-1U < -2147483647		unsigned 		  0
+```
+
+## Exercise 2.25
+
+```c
+float sum_elements(float a[], unsigned length)
+{
+	int i;
+	float result = 0;
+	
+	for (i = 0; i <= length -1; i++)	// for (i = 0; i < length; i++)
+		result += a[i];
+	return result;
+}
+```
+
+## Exercise 2.26
+>* A.	when *s size is smaller than *t. strlen(s) - strlen(t) will always bigger than 0
+>* B.	Beacuse size_t is unsigned int, always bigger than 0. strlen(s) - strlen(s) will never smaller than 0
+>* C.	
+```c
+int strlonger(char *s, char *t)
+{
+	return strlen(s) > strlen(t);
+}
+```
+
+## Exercise 2.27
+```c
+int uadd_ok(unsigned x, unsigned y)
+{
+	if ((x+y) < x || (x+y) < y)
+		return 0;
+	else
+		return 1;
+}
+```
+
+## Exercise 2.28
+```flow
+		x						-u/4 x
+0			0				0			0
+5			5				11			B
+8			8				8			8
+D			13				3			3
+F			15				1			1
+```
