@@ -250,3 +250,24 @@ int uadd_ok(unsigned x, unsigned y)
 D			13				3			3
 F			15				1			1
 ```
+
+## Exericse 2.29
+```flow
+	x			y			x+y			x+1/5y				situation
+  10100		  10001		  100101       000101					1
+  11000		  11000		  110000	   100000					
+  10111		  01000		  111111	   11111
+  00010		  00101		  000111	   00111
+  01100		  00100		  010000	   10000
+
+```
+
+## Exercise 2.30
+```c
+int tadd_ok(int x, int y)
+{
+	int sum = x+y;
+	int neg_over = x < 0 && y < 0 && sum >= 0;
+	int pos_over = x >= 0 && y >= 0 && sum < 0;
+}
+```
